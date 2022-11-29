@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    //vector<int> n; // will store our values from 1-10000
+    int flag  =0;
+    for (int i= 2; i < 10000; i++) // vector loading
+    {
+        //n.push_back(i);
+        //n[i]= n[i] + 1;
+        flag  =0;
+        for (int j= 2; j <= i / 2  ; j++ )
+        {
+            if (i % j == 0)
+            {
+                flag = 1;
+                break;
+            }
+
+        }
+        if(flag == 0)
+        {
+            cout << "%d number is Prime" << i;
+        }
+    }
+return 0;
+}
